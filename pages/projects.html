@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Projects | Koushik C. Portfolio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    
+    <!-- Custom Tailwind Configuration -->
+    <script src="../js/tailwind-config.js"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-background text-on-surface selection:bg-primary/30 tech-pattern overflow-x-hidden min-h-screen flex flex-col">
+
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-surface/70 dark:bg-surface/70 backdrop-blur-md shadow-sm border-b border-outline-variant/20 transition-all duration-300" id="navbar">
+        <div class="flex justify-between items-center px-gutter py-2 max-w-container-max-width mx-auto">
+            <a href="index.html" class="text-headline-md font-headline-md font-bold tracking-tighter text-on-surface dark:text-on-surface">Koushik C.</a>
+            <div class="hidden md:flex gap-stack-lg items-center">
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md" href="index.html">Home</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md" href="about.html">About</a>
+                <a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md" href="projects.html">Projects</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md" href="skills.html">Skills &amp; Education</a>
+            </div>
+            <div class="flex items-center gap-stack-md">
+                <div class="hidden sm:flex gap-stack-sm text-on-surface-variant">
+                    <span class="material-symbols-outlined">code</span>
+                    <span class="material-symbols-outlined">terminal</span>
+                </div>
+                <a href="mailto:koushikc0508@gmail.com" class="bg-primary text-on-primary px-gutter py-2 rounded-lg font-label-md hover:opacity-90 active:scale-95 transition-all inline-block">
+                    Contact Me
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-[64px] pb-section-padding px-gutter max-w-container-max-width mx-auto flex-1">
+        <!-- Section Header -->
+        <header class="mb-10">
+            <span class="text-primary font-label-md tracking-widest uppercase block mb-4">Portfolio</span>
+            <h1 class="font-headline-xl text-headline-xl md:text-headline-xl text-on-surface mb-6">Selected Works & <br/><span class="text-primary">Technical Architectures</span></h1>
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                A showcase of intelligent systems, scalable backends, and user-centric interfaces designed to solve real-world problems through AI and modern engineering.
+            </p>
+        </header>
+
+        <!-- Projects Bento Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+            <!-- Project 1: Nova (Main Feature) -->
+            <article class="lg:col-span-8 glass-card rounded-xl overflow-hidden inner-glow flex flex-col group">
+                <div class="relative aspect-video overflow-hidden">
+                    <img alt="AI Tutor Interface" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A futuristic and clean digital interface for an AI educational application. The screen displays flowing lines of code, neural network diagrams, and a sophisticated dashboard with glowing blue and teal data visualizations. The lighting is soft and atmospheric, emphasizing a high-tech, intelligent learning environment consistent with a premium developer portfolio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeA8lbOvhWWPeJmH2Fx96K-38S4uZbGkhviKpnMiQ0AMIwHDv_AE_SjAlGUoz8lqb85hwJe1Gj1a4PK4E80x8y_Rs0BqLynS5Nw68B6PpyvUwun-vG4nTjGtiYxtDgEeIuhhR4RuqFuntS0pQHmhaNf6cfEt3rjhVTcv6Ui13VD72iwmioS09gS3ltx5_BWFWckZHluAI9ZDH_vN1KJs1_djjhZftfckv5kiJkt1xZwamqRRoL4J676zRDa60DHFix_VnGsXisgNw"/>
+                    <div class="absolute top-4 left-4 flex gap-2">
+                        <span class="bg-surface-container-highest/80 backdrop-blur-md px-3 py-1 rounded text-xs font-label-md text-primary">FEATURED</span>
+                        <span class="bg-surface-container-highest/80 backdrop-blur-md px-3 py-1 rounded text-xs font-label-md text-on-tertiary-fixed">GEN-AI</span>
+                    </div>
+                </div>
+                <div class="p-5 flex-1 flex flex-col">
+                    <div class="flex justify-between items-start mb-4">
+                        <h2 class="font-headline-lg text-headline-lg text-on-surface">Nova - AI-Powered CS Tutor</h2>
+                        <div class="flex gap-4">
+                            <a class="text-on-surface-variant hover:text-primary transition-colors" href="https://github.com/koushikc05/Nova" target="_blank">
+                                <span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-4 flex-1">
+                        An intelligent, GenAI-driven educational platform designed for Computer Science students, featuring dynamic quizzes and detailed, one-click explanations generated by LLMs to streamline learning. Architected the backend API using FastAPI and integrated advanced LLM capabilities to dynamically generate and deliver contextual educational content.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-surface-variant text-[10px] tracking-widest font-bold px-2 py-1 rounded">FASTAPI</span>
+                        <span class="bg-surface-variant text-[10px] tracking-widest font-bold px-2 py-1 rounded">GEMINI 3.1 FLASH LITE</span>
+                        <span class="bg-surface-variant text-[10px] tracking-widest font-bold px-2 py-1 rounded">JAVASCRIPT</span>
+                        <span class="bg-surface-variant text-[10px] tracking-widest font-bold px-2 py-1 rounded">PYTHON</span>
+                        <span class="bg-surface-variant text-[10px] tracking-widest font-bold px-2 py-1 rounded">LANGCHAIN</span>
+                    </div>
+                    <div class="flex items-center gap-6">
+                        <a class="group/btn inline-flex items-center gap-2 text-primary font-label-md hover:underline" href="https://github.com/koushikc05/Nova">
+                            View Repository
+                            <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Stats/Tech Sidebar (Visual Interest) -->
+            <aside class="lg:col-span-4 flex flex-col gap-5">
+                <div class="glass-card rounded-xl p-6 inner-glow flex-1">
+                    <h3 class="font-headline-md text-headline-md text-on-surface mb-6 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary" data-icon="bolt">bolt</span>
+                        Tech Stack
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center p-3 rounded bg-surface-container-low">
+                            <span class="font-body-md">AI / ML</span>
+                            <span class="text-primary material-symbols-outlined" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 rounded bg-surface-container-low">
+                            <span class="font-body-md">Backend Architecture</span>
+                            <span class="text-primary material-symbols-outlined" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 rounded bg-surface-container-low">
+                            <span class="font-body-md">Cloud Deployment</span>
+                            <span class="text-primary material-symbols-outlined" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 rounded bg-surface-container-low">
+                            <span class="font-body-md">Full Stack</span>
+                            <span class="text-primary material-symbols-outlined" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-primary p-5 rounded-xl flex flex-col justify-between text-on-primary min-h-[140px] shadow-lg shadow-primary/10">
+                    <span class="material-symbols-outlined text-4xl" data-icon="auto_awesome" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+                    <div>
+                        <p class="font-headline-md text-headline-md leading-tight mb-2">Architecting the future of software with Agentic AI.</p>
+                        <p class="text-xs opacity-80 uppercase tracking-widest font-bold">Koushik C. — 2026</p>
+                    </div>
+                </div>
+            </aside>
+            
+            <!-- Project 2: ArenaAssist -->
+            <article class="lg:col-span-6 glass-card rounded-xl overflow-hidden inner-glow flex flex-col group">
+                <div class="relative h-64 overflow-hidden">
+                    <img alt="Sports Arena Crowd" class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105" data-alt="An expansive view of a modern sporting arena filled with an enthusiastic crowd, captured during a high-energy event. The scene is illuminated by dramatic stadium lighting that creates deep shadows and brilliant highlights. The composition focuses on the architectural scale and the vibrant atmosphere of the venue, symbolizing the crowd management and attendee services provided by ArenaAssist." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxDjpfEW6nQu_w3OhsQQYdrAsgeGcFyH8h1febR0-g6lExxlC13UNmDDaBBuaXad4xq3-218obcRGSr35AYtFxDl9t17yQ9dxuKVpYPJN48ncgrHww8AIg3dDaaF5ZM0jBZzvlp-Y8I8tX6L31-05l6EiREENv_FbOmlm3q4iZ70C67VKS1gCeAJkPh_PKw81JE_KcBhblnc0iTQ1aRHVgjtmZyXYQf284TJd2ZaZFVJWRwzVoemlEznyM8X32F9-BuZNBocjdVso"/>
+                </div>
+                <div class="p-5 flex-1 flex flex-col">
+                    <div class="flex justify-between items-start mb-4">
+                        <h2 class="font-headline-lg text-headline-lg text-on-surface">ArenaAssist</h2>
+                        <a class="text-on-surface-variant hover:text-primary transition-colors" href="https://github.com/koushikc05/Arena_Assist" target="_blank">
+                            <span class="material-symbols-outlined" data-icon="open_in_new">open_in_new</span>
+                        </a>
+                    </div>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-4 flex-1">
+                        A mobile web application acting as a personal assistant for sporting event attendees, providing crowd management solutions and seat-side service capabilities. Focused on building a responsive, accessible user experience and intuitive design.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-surface-variant text-[10px] tracking-widest font-bold px-2 py-1 rounded">HTML5</span>
+                        <span class="bg-surface-variant text-[10px] tracking-widest font-bold px-2 py-1 rounded">CSS3</span>
+                        <span class="bg-surface-variant text-[10px] tracking-widest font-bold px-2 py-1 rounded">JAVASCRIPT</span>
+                    </div>
+                    <div class="flex gap-6">
+                        <a class="text-primary font-label-md hover:underline" href="https://github.com/koushikc05/Arena_Assist">GitHub</a>
+                        <a class="text-primary font-label-md hover:underline" href="https://arenaassist-106646052461.us-central1.run.app/">Live Demo</a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Call to Action / Future Project Slot -->
+            <article class="lg:col-span-6 glass-card rounded-xl p-6 inner-glow flex flex-col justify-center items-center text-center border-dashed border-2 border-outline-variant/30 hover:border-primary/50 cursor-pointer">
+                <div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center mb-4">
+                    <span class="material-symbols-outlined text-outline" data-icon="add" style="font-size: 32px;">add</span>
+                </div>
+                <h3 class="font-headline-md text-headline-md text-on-surface mb-2">Your Next Big Idea</h3>
+                <p class="font-body-md text-on-surface-variant mb-6">I am always open to collaborating on high-impact projects in AI, ML, and Backend Engineering.</p>
+                <a href="mailto:koushikc0508@gmail.com" class="bg-secondary text-on-secondary px-5 py-2 rounded font-label-md hover:bg-primary hover:text-on-primary transition-all">
+                    Let's Build Together
+                </a>
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container dark:bg-surface-container border-t border-outline-variant/10 w-full py-stack-lg mt-auto">
+        <div class="flex flex-col md:flex-row justify-between items-center px-gutter max-w-container-max-width mx-auto gap-stack-md">
+            <div class="font-headline-md text-headline-md font-bold text-on-surface">Koushik C.</div>
+            <p class="font-body-md text-body-md text-on-surface-variant">© 2026 Koushik C. Built with Precision.</p>
+            <div class="flex gap-stack-lg">
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="https://www.linkedin.com/in/koushik-c-/">LinkedIn</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="https://github.com/koushikc05">GitHub</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="mailto:koushikc0508@gmail.com">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script src="../js/main.js"></script>
+</body>
+</html>
