@@ -17,6 +17,47 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body class="bg-background text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container tech-pattern overflow-x-hidden">
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm hidden" aria-hidden="true"></div>
+
+    <!-- Mobile Menu Drawer -->
+    <div id="mobile-menu-drawer" class="mobile-menu-drawer fixed top-0 right-0 h-full w-[280px] z-50 flex flex-col" role="dialog" aria-modal="true" aria-label="Navigation menu">
+        <!-- Drawer Header -->
+        <div class="flex justify-between items-center px-6 py-5 border-b border-outline-variant/20">
+            <span class="font-headline-md font-bold text-on-surface tracking-tighter">Koushik C.</span>
+            <button id="mobile-menu-close" class="mobile-menu-icon-btn" aria-label="Close menu">
+                <span class="material-symbols-outlined text-on-surface-variant">close</span>
+            </button>
+        </div>
+        <!-- Nav Links -->
+        <nav class="flex flex-col gap-1 px-4 pt-4 flex-1" aria-label="Mobile navigation">
+            <a href="index.html" class="mobile-nav-link">
+                <span class="material-symbols-outlined">home</span>
+                Home
+            </a>
+            <a href="about.html" class="mobile-nav-link">
+                <span class="material-symbols-outlined">person</span>
+                About
+            </a>
+            <a href="projects.html" class="mobile-nav-link">
+                <span class="material-symbols-outlined">code</span>
+                Projects
+            </a>
+            <a href="skills.html" class="mobile-nav-link mobile-nav-link--active">
+                <span class="material-symbols-outlined">auto_awesome</span>
+                Skills &amp; Education
+            </a>
+        </nav>
+        <!-- Contact CTA at bottom -->
+        <div class="px-4 pb-8 pt-4 border-t border-outline-variant/20 mt-auto">
+            <a href="mailto:koushikc0508@gmail.com" class="mobile-contact-btn">
+                <span class="material-symbols-outlined">mail</span>
+                Contact Me
+            </a>
+        </div>
+    </div>
+
     <!-- TopNavBar -->
     <nav class="fixed top-0 w-full z-50 bg-surface/70 dark:bg-surface/70 backdrop-blur-md border-b border-outline-variant/20 shadow-sm transition-all duration-300" id="navbar">
         <div class="flex justify-between items-center px-gutter py-2 max-w-container-max-width mx-auto">
@@ -32,7 +73,10 @@
                     <span class="material-symbols-outlined" data-icon="code">code</span>
                     <span class="material-symbols-outlined" data-icon="terminal">terminal</span>
                 </div>
-                <a href="mailto:koushikc0508@gmail.com" class="bg-primary text-on-primary px-6 py-2 rounded-lg font-bold hover:scale-95 active:scale-90 transition-transform inline-block">Contact Me</a>
+                <!-- Hamburger menu button -->
+                <button id="mobile-menu-toggle" class="mobile-menu-icon-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu-drawer">
+                    <span class="material-symbols-outlined text-on-surface">menu</span>
+                </button>
             </div>
         </div>
     </nav>

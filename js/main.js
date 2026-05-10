@@ -145,4 +145,52 @@ document.addEventListener('DOMContentLoaded', () => {
 
         animateTechChips();
     }
+
+    // 5. Mobile Menu Toggle
+    const menuToggle   = document.getElementById('mobile-menu-toggle');
+    const menuClose    = document.getElementById('mobile-menu-close');
+    const menuDrawer   = document.getElementById('mobile-menu-drawer');
+    const menuOverlay  = document.getElementById('mobile-menu-overlay');
+
+    if (menuToggle && menuDrawer && menuOverlay) {
+        function openMenu() {
+            menuDrawer.classList.add('is-open');
+            menuOverlay.classList.remove('hidden');
+            document.body.classList.add('menu-open');
+            menuToggle.setAttribute('aria-expanded', 'true');
+            // Shift focus into the drawer for accessibility
+            if (menuClose) menuClose.focus();
+        }
+
+        function closeMenu() {
+            menuDrawer.classList.remove('is-open');
+            menuOverlay.classList.add('hidden');
+            document.body.classList.remove('menu-open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+            menuToggle.focus();
+        }
+
+        // Open on hamburger click
+        menuToggle.addEventListener('click', openMenu);
+
+        // Close on X button click
+        if (menuClose) {
+            menuClose.addEventListener('click', closeMenu);
+        }
+
+        // Close when overlay (backdrop) is clicked
+        menuOverlay.addEventListener('click', closeMenu);
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && menuDrawer.classList.contains('is-open')) {
+                closeMenu();
+            }
+        });
+
+        // Close when any nav link inside the drawer is clicked
+        menuDrawer.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+    }
 });
