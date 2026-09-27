@@ -1,16 +1,412 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Koushik C. | Portfolio</title>
-    <!-- Redirect to the actual index.html inside the pages directory -->
-    <meta http-equiv="refresh" content="0; url=pages/index.html">
-    <script>
-        window.location.href = "pages/index.html";
-    </script>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Koushik C. | AI/ML &amp; Full-Stack Developer</title>
+    <meta name="description" content="Portfolio of Koushik C. — 3rd-Year B.Tech Computer Science student specializing in AI/ML, Generative AI, and Full-Stack Development."/>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+    <!-- Three.js via CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/style.css"/>
 </head>
 <body>
-    <p>If you are not redirected automatically, follow this <a href="pages/index.html">link to the portfolio</a>.</p>
+
+    <!-- ======================= NAVBAR ======================= -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-logo">Koushik C.</a>
+            <div class="nav-links" id="nav-links">
+                <a href="#hero" class="nav-link active" data-section="hero">Home</a>
+                <a href="#about" class="nav-link" data-section="about">About</a>
+                <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+                <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+                <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-overlay" id="mobile-overlay"></div>
+    <div class="mobile-drawer" id="mobile-drawer">
+        <div class="drawer-header">
+            <span class="nav-logo">Koushik C.</span>
+            <button class="hamburger" id="drawer-close" aria-label="Close menu">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <nav class="drawer-nav">
+            <a href="#hero" class="drawer-link"><span class="material-symbols-outlined">home</span> Home</a>
+            <a href="#about" class="drawer-link"><span class="material-symbols-outlined">person</span> About</a>
+            <a href="#projects" class="drawer-link"><span class="material-symbols-outlined">code</span> Projects</a>
+            <a href="#skills" class="drawer-link"><span class="material-symbols-outlined">auto_awesome</span> Skills</a>
+            <a href="#contact" class="drawer-link"><span class="material-symbols-outlined">mail</span> Contact</a>
+        </nav>
+    </div>
+
+    <main>
+        <!-- ======================= HERO ======================= -->
+        <section class="hero" id="hero">
+            <canvas id="hero-canvas"></canvas>
+            <div class="hero-content">
+                <div class="hero-text reveal">
+                    <span class="label-tag">Building the Future</span>
+                    <h1>3rd-Year B.Tech CSE Student | <span class="text-accent">AI/ML, GenAI &amp; Full-Stack Developer</span></h1>
+                    <p class="hero-sub">Building intelligent applications and scalable backend architectures. Focused on the intersection of deep learning and robust software engineering.</p>
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary">View Projects <span class="material-symbols-outlined">arrow_forward</span></a>
+                        <a href="mailto:koushikc0508@gmail.com" class="btn btn-outline">Get in Touch</a>
+                    </div>
+                    <div class="hero-socials">
+                        <a href="https://www.linkedin.com/in/koushik-c-/" target="_blank" rel="noopener"><span class="material-symbols-outlined">link</span> LinkedIn</a>
+                        <a href="https://github.com/koushikc05" target="_blank" rel="noopener"><span class="material-symbols-outlined">terminal</span> GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================= ABOUT ======================= -->
+        <section class="section" id="about">
+            <div class="container">
+                <div class="section-grid about-grid">
+                    <div class="about-text reveal">
+                        <span class="label-tag">01. Biography</span>
+                        <h2>AI Enthusiast &amp; Full-Stack Developer</h2>
+                        <p>I'm a 3rd-Year B.Tech Computer Science student at Dr. MGR Educational and Research Institute in Chennai. Right now, I'm diving deep into learning AI/ML, Generative AI, and Full-Stack Development.</p>
+                        <p>I love building intelligent applications using LLMs and Agentic AI systems, and I'm highly motivated to design scalable backend architectures that power practical, real-world solutions.</p>
+                        <div class="focus-chips">
+                            <span class="chip">AI/ML</span>
+                            <span class="chip">GENERATIVE AI</span>
+                            <span class="chip">AGENTIC AI</span>
+                            <span class="chip">BACKEND ARCHITECTURE</span>
+                            <span class="chip">FULL-STACK</span>
+                        </div>
+                    </div>
+                    <div class="about-right reveal" style="animation-delay:.1s">
+                        <div class="portrait-wrap">
+                            <div class="portrait-accent"></div>
+                            <div class="portrait-frame">
+                                <img src="assets/images/koushik.png" alt="Koushik C. — Portrait"/>
+                            </div>
+                            <div class="portrait-badge">
+                                <span class="material-symbols-outlined">token</span>
+                                <div>
+                                    <strong>B.Tech CSE</strong>
+                                    <small>Undergraduate Student</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card edu-card">
+                            <div class="card-header">
+                                <span class="material-symbols-outlined">school</span>
+                                <div>
+                                    <h3>Education</h3>
+                                    <small>Academic Background</small>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <strong>B.Tech in Computer Science and Engineering</strong>
+                                <p>Dr. MGR Educational and Research Institute</p>
+                                <div class="edu-meta">
+                                    <span>Chennai, Tamil Nadu</span>
+                                    <span>2023 — 2027</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================= PROJECTS ======================= -->
+        <section class="section section-alt" id="projects">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="label-tag">02. Portfolio</span>
+                    <h2>Featured Innovations</h2>
+                    <p class="section-sub">A selection of tools and platforms built to solve complex challenges in education and logistics.</p>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Nova -->
+                    <article class="project-card project-card--wide tilt-card reveal">
+                        <div class="project-top">
+                            <div>
+                                <h3>Nova</h3>
+                                <span class="project-label">AI-Powered CS Tutor</span>
+                            </div>
+                            <a href="https://github.com/koushikc05/Nova" target="_blank" rel="noopener" class="icon-btn" aria-label="View Nova on GitHub">
+                                <span class="material-symbols-outlined">code</span>
+                            </a>
+                        </div>
+                        <p>An intelligent, GenAI-driven educational platform designed for Computer Science students, featuring dynamic quizzes and detailed, one-click explanations generated by LLMs to streamline learning. Architected the backend API using FastAPI and integrated advanced LLM capabilities.</p>
+                        <div class="tag-row">
+                            <span class="tag">FASTAPI</span>
+                            <span class="tag">GEMINI 3.1</span>
+                            <span class="tag">PYTHON</span>
+                            <span class="tag">JAVASCRIPT</span>
+                            <span class="tag">LANGCHAIN</span>
+                        </div>
+                        <a href="https://github.com/koushikc05/Nova" target="_blank" rel="noopener" class="project-link">View Repository <span class="material-symbols-outlined">arrow_forward</span></a>
+                    </article>
+
+                    <!-- ArenaAssist -->
+                    <article class="project-card tilt-card reveal" style="animation-delay:.12s">
+                        <div class="project-top">
+                            <div>
+                                <h3>ArenaAssist</h3>
+                                <span class="project-label">Sports Event Assistant</span>
+                            </div>
+                            <a href="https://github.com/koushikc05/Arena_Assist" target="_blank" rel="noopener" class="icon-btn" aria-label="View ArenaAssist on GitHub">
+                                <span class="material-symbols-outlined">sports_soccer</span>
+                            </a>
+                        </div>
+                        <p>A mobile web application acting as a personal assistant for sporting event attendees, providing crowd management solutions and seat-side service capabilities.</p>
+                        <div class="tag-row">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JAVASCRIPT</span>
+                        </div>
+                        <div class="project-links-row">
+                            <a href="https://github.com/koushikc05/Arena_Assist" target="_blank" rel="noopener" class="project-link">GitHub <span class="material-symbols-outlined">arrow_forward</span></a>
+                            <a href="https://arenaassist-106646052461.us-central1.run.app/" target="_blank" rel="noopener" class="project-link">Live Demo <span class="material-symbols-outlined">open_in_new</span></a>
+                        </div>
+                    </article>
+
+                    <!-- Open for Collaboration -->
+                    <article class="project-card project-card--cta tilt-card reveal" style="animation-delay:.2s">
+                        <span class="material-symbols-outlined cta-icon">add</span>
+                        <h3>Your Next Big Idea</h3>
+                        <p>I am always open to collaborating on high-impact projects in AI, ML, and Backend Engineering.</p>
+                        <a href="mailto:koushikc0508@gmail.com" class="btn btn-primary btn-sm">Let's Build Together</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================= SKILLS & EDUCATION ======================= -->
+        <section class="section" id="skills">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="label-tag">03. Expertise</span>
+                    <h2>Skills &amp; Education</h2>
+                    <p class="section-sub">A technical breakdown of my core expertise in AI/ML, Full-Stack Development, and academic background.</p>
+                </div>
+
+                <!-- Tech Stack Showcase -->
+                <div class="tech-stack-wrap reveal">
+                    <div class="tech-stack-header">
+                        <div class="tech-stack-label">
+                            <span class="material-symbols-outlined">rotate_right</span>
+                            <div>
+                                <h3>Core Stack in Motion</h3>
+                                <p class="tech-stack-sublabel">Interactive 3D orbit &bull; Drag to spin &bull; Hover to pause</p>
+                            </div>
+                        </div>
+                        <div class="orbit-badge">
+                            <span class="orbit-pulse"></span>
+                            <span>3D Interactive Orbit</span>
+                        </div>
+                    </div>
+
+                    <!-- 3D Orbit Stage -->
+                    <div class="skills-3d-stage" id="skills-3d-stage" title="Click & drag or swipe to rotate 3D ring">
+                        <canvas id="skills-ring-canvas"></canvas>
+                        <div class="orbit-controls-overlay">
+                            <span class="orbit-hint"><span class="material-symbols-outlined">drag_pan</span> Drag to rotate &bull; Hover to pause</span>
+                        </div>
+                    </div>
+
+                    <!-- Core Stack Flat Grid -->
+                    <div class="stack-block">
+                        <div class="stack-block-title">
+                            <div class="stack-title-left">
+                                <span class="material-symbols-outlined">terminal</span>
+                                <h4>Core Stack</h4>
+                            </div>
+                            <span class="stack-note">Tools shipped in Nova &amp; ArenaAssist</span>
+                        </div>
+                        <div class="tech-grid tech-grid--core">
+                            <div class="tech-item" data-tech="Python">
+                                <div class="tech-icon-box">
+                                    <img src="assets/images/icons/python.jpeg" alt="Python"/>
+                                </div>
+                                <span class="tech-name">Python</span>
+                                <span class="tech-role">AI / Scripting</span>
+                            </div>
+                            <div class="tech-item" data-tech="JavaScript">
+                                <div class="tech-icon-box">
+                                    <img src="assets/images/icons/js.png" alt="JavaScript"/>
+                                </div>
+                                <span class="tech-name">JavaScript</span>
+                                <span class="tech-role">Frontend / Web</span>
+                            </div>
+                            <div class="tech-item" data-tech="FastAPI">
+                                <div class="tech-icon-box">
+                                    <img src="assets/images/icons/fastapi.png" alt="FastAPI"/>
+                                </div>
+                                <span class="tech-name">FastAPI</span>
+                                <span class="tech-role">Backend APIs</span>
+                            </div>
+                            <div class="tech-item" data-tech="LangChain">
+                                <div class="tech-icon-box">
+                                    <img src="assets/images/icons/langchain.png" alt="LangChain"/>
+                                </div>
+                                <span class="tech-name">LangChain</span>
+                                <span class="tech-role">GenAI &amp; LLMs</span>
+                            </div>
+                            <div class="tech-item" data-tech="HTML5/CSS3">
+                                <div class="tech-icon-box">
+                                    <img src="assets/images/icons/html.png" alt="HTML5 &amp; CSS3"/>
+                                </div>
+                                <span class="tech-name">HTML5 / CSS3</span>
+                                <span class="tech-role">Web Standards</span>
+                            </div>
+                            <div class="tech-item" data-tech="Git">
+                                <div class="tech-icon-box">
+                                    <img src="assets/images/icons/git.png" alt="Git"/>
+                                </div>
+                                <span class="tech-name">Git</span>
+                                <span class="tech-role">Version Control</span>
+                            </div>
+                            <div class="tech-item" data-tech="Google Cloud">
+                                <div class="tech-icon-box">
+                                    <img src="assets/images/icons/google-cloud.png" alt="Google Cloud"/>
+                                </div>
+                                <span class="tech-name">Google Cloud</span>
+                                <span class="tech-role">Cloud Run Hosting</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Currently Exploring Row -->
+                    <div class="stack-block stack-block--exploring">
+                        <div class="stack-block-title">
+                            <div class="stack-title-left">
+                                <span class="material-symbols-outlined">explore</span>
+                                <h4>Currently Exploring</h4>
+                            </div>
+                            <span class="stack-note">Expanding full-stack &amp; agentic depth</span>
+                        </div>
+                        <div class="tech-grid tech-grid--exploring">
+                            <div class="tech-item tech-item--exploring" data-tech="React">
+                                <div class="tech-icon-box">
+                                    <img src="assets/images/icons/reactjs.png" alt="React"/>
+                                </div>
+                                <div class="tech-meta">
+                                    <span class="tech-name">React</span>
+                                    <span class="exploring-badge">Frontend UI</span>
+                                </div>
+                            </div>
+                            <div class="tech-item tech-item--exploring" data-tech="PostgreSQL / Supabase">
+                                <div class="tech-icon-box">
+                                    <img src="assets/images/icons/postgresql.png" alt="PostgreSQL &amp; Supabase"/>
+                                </div>
+                                <div class="tech-meta">
+                                    <span class="tech-name">PostgreSQL / Supabase</span>
+                                    <span class="exploring-badge">Relational &amp; BaaS</span>
+                                </div>
+                            </div>
+                            <div class="tech-item tech-item--exploring" data-tech="LangGraph / Vector DB">
+                                <div class="tech-icon-box">
+                                    <img src="assets/images/icons/langgraph.svg" alt="LangGraph &amp; Vector DB"/>
+                                </div>
+                                <div class="tech-meta">
+                                    <span class="tech-name">LangGraph / Vector DB</span>
+                                    <span class="exploring-badge">Agentic Workflows &amp; RAG</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="card edu-detail-card reveal">
+                    <div class="edu-detail-inner">
+                        <div>
+                            <h3>B.Tech in Computer Science and Engineering</h3>
+                            <p>Dr. MGR Educational and Research Institute</p>
+                            <div class="edu-loc">
+                                <span class="material-symbols-outlined">location_on</span>
+                                <span>Chennai, Tamil Nadu</span>
+                            </div>
+                        </div>
+                        <div class="edu-year-badge">
+                            <span class="badge">2023 — 2027</span>
+                            <small>Expected Graduation &bull; Class of 2027</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Future Focus -->
+                <div class="future-focus reveal">
+                    <div class="future-text">
+                        <h3>Future Focus</h3>
+                        <p>I am currently concentrating my efforts on mastering <strong>Agentic AI systems</strong> and designing <strong>scalable backend architectures</strong>. My goal is to build intelligent applications that solve real-world complexities through precision engineering.</p>
+                        <div class="focus-tags">
+                            <span><span class="material-symbols-outlined">auto_awesome</span> Generative AI</span>
+                            <span><span class="material-symbols-outlined">hub</span> LLM Agents</span>
+                        </div>
+                    </div>
+                    <div class="future-image">
+                        <img src="assets/images/unnamed.png" alt="Future Tech Concept"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================= CONTACT ======================= -->
+        <section class="section section-alt" id="contact">
+            <div class="container">
+                <div class="contact-card reveal">
+                    <h2>Ready to build something intelligent?</h2>
+                    <p>Currently open to internships, collaborations, and technical discussions on GenAI and backend systems.</p>
+                    <div class="contact-cta">
+                        <a href="mailto:koushikc0508@gmail.com" class="btn btn-primary">Send Message</a>
+                        <a href="https://www.linkedin.com/in/koushik-c-/" target="_blank" rel="noopener" class="btn btn-outline">Connect on LinkedIn</a>
+                    </div>
+                    <div class="contact-info">
+                        <a href="mailto:koushikc0508@gmail.com"><span class="material-symbols-outlined">mail</span> koushikc0508@gmail.com</a>
+                        <a href="https://github.com/koushikc05" target="_blank" rel="noopener"><span class="material-symbols-outlined">terminal</span> GitHub</a>
+                        <a href="https://www.linkedin.com/in/koushik-c-/" target="_blank" rel="noopener"><span class="material-symbols-outlined">link</span> LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ======================= FOOTER ======================= -->
+    <footer>
+        <div class="container footer-inner">
+            <span class="footer-brand">Koushik C.</span>
+            <p>&copy; 2026 Koushik C. Built with Precision.</p>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/koushik-c-/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/koushikc05" target="_blank" rel="noopener">GitHub</a>
+                <a href="mailto:koushikc0508@gmail.com">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-ring" id="cursor-ring">
+        <span class="cursor-label" id="cursor-label"></span>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/icons-data.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
